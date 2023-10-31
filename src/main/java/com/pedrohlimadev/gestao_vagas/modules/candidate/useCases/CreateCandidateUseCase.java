@@ -1,8 +1,8 @@
-package com.pedrohlimadev.gestao_vagas.mdoules.candidate.useCases;
+package com.pedrohlimadev.gestao_vagas.modules.candidate.useCases;
 
 import com.pedrohlimadev.gestao_vagas.exceptions.UserFoundException;
-import com.pedrohlimadev.gestao_vagas.mdoules.candidate.CandidateEntity;
-import com.pedrohlimadev.gestao_vagas.mdoules.candidate.CandidateRepository;
+import com.pedrohlimadev.gestao_vagas.modules.candidate.CandidateEntity;
+import com.pedrohlimadev.gestao_vagas.modules.candidate.CandidateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

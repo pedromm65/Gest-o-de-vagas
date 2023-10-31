@@ -1,4 +1,4 @@
-package com.pedrohlimadev.gestao_vagas.mdoules.candidate;
+package com.pedrohlimadev.gestao_vagas.modules.candidate;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

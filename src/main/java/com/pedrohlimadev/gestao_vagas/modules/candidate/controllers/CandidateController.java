@@ -1,9 +1,7 @@
-package com.pedrohlimadev.gestao_vagas.mdoules.candidate.controllers;
+package com.pedrohlimadev.gestao_vagas.modules.candidate.controllers;
 
-import com.pedrohlimadev.gestao_vagas.exceptions.UserFoundException;
-import com.pedrohlimadev.gestao_vagas.mdoules.candidate.CandidateEntity;
-import com.pedrohlimadev.gestao_vagas.mdoules.candidate.CandidateRepository;
-import com.pedrohlimadev.gestao_vagas.mdoules.candidate.useCases.CreateCandidateUseCase;
+import com.pedrohlimadev.gestao_vagas.modules.candidate.CandidateEntity;
+import com.pedrohlimadev.gestao_vagas.modules.candidate.useCases.CreateCandidateUseCase;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
