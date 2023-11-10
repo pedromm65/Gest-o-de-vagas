@@ -25,21 +25,21 @@ public class AuthCompanyUseCase {
     private PasswordEncoder passwordEncoder;
 
     public String execute(AuthCompanyDTO authCompanyDTO) throws AuthenticationException {
-        var comapny = this.companyRepository.findByUsername(authCompanyDTO.getUsername()).orElseThrow(() -> {
-            throw new UsernameNotFoundException("Comapny not found");
+        var company = this.companyRepository.findByUsername(authCompanyDTO.getUsername()).orElseThrow(() -> {
+            throw new UsernameNotFoundException("Username/password incorrect");
         });
 
         //VERFIFICAR SE AS SENHAS SÃO IGUAIS
-        var passwordMatchs = this.passwordEncoder.matches(authCompanyDTO.getPassword(), comapny.getPassword());
+        var passwordMatches = this.passwordEncoder.matches(authCompanyDTO.getPassword(), company.getPassword());
 
-        if(!passwordMatchs) {
+        if(!passwordMatches) {
             throw new AuthenticationException();
         }
 
         Algorithm algorithm = Algorithm.HMAC256(secretKey);
 
         var token = JWT.create().withIssuer("javagas")
-                .withSubject(comapny.getId().toString())
+                .withSubject(company.getId().toString())
                 .sign(algorithm);
 
         return token;
